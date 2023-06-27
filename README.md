@@ -14,5 +14,11 @@ https://github.com/langsasec/Hunting-Rabbit-PortScanner
 
 https://github.com/langsasec/Hunting-Rabbit-PortScanner-Go
 
+### 2.Hunting-Rabbit-DirScanner
+
+Hunting-Rabbit-DirScanner（猎兔目录扫描器）：一款快速易上手的目录扫描工具。
+
+https://github.com/langsasec/Hunting-Rabbit-DirScanner
+
 **敬请期待**！
 
