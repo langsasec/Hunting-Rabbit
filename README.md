@@ -12,7 +12,6 @@ Hunting-Rabbit-PortScanner（猎兔端口扫描器）：一款快速，准确的
 
 https://github.com/langsasec/Hunting-Rabbit-PortScanner
 
-https://github.com/langsasec/Hunting-Rabbit-PortScanner-Go
 
 ### 2.Hunting-Rabbit-DirScanner
 
