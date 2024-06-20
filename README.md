@@ -19,5 +19,24 @@ Hunting-Rabbit-DirScanner（猎兔目录扫描器）：一款快速易上手的�
 
 https://github.com/langsasec/Hunting-Rabbit-DirScanner
 
+### 3.Hunting-Rabbit-VulScanner
+
+Hunting-Rabbit-VulScanner（猎兔漏洞扫描器）：一款简洁高效的漏洞扫描器。
+
+https://github.com/langsasec/Hunting-Rabbit-VulScanner
+
+### 4.Hunting-Rabbit-POC-Generator
+
+Hunting-Rabbit-POC-Generator（猎兔POC生成器）：Hunting-Rabbit-VulScanner 专属POC生成器。
+
+https://github.com/langsasec/Hunting-Rabbit-POC-Generator
+
+### 5.Hunting-Rabbit-POC
+
+Hunting-Rabbit-POC（猎兔POC）：Hunting-Rabbit-VulScanner 官方POC库
+
+https://github.com/langsasec/Hunting-Rabbit-POC
+
+
 **敬请期待**！
 
