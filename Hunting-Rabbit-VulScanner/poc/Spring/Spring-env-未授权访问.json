@@ -1,0 +1,24 @@
+{
+    "vul_name": "Spring env 未授权访问",
+    "level": "中危",
+    "description": "Springboot1.x的env端点可能泄露敏感配置信息",
+    "product": "SpringBoot",
+    "version": "1.x",
+    "cve": "无",
+    "reference": "https://www.jb51.net/program/321035wov.htm#_lab2_2_1",
+    "fixing": "关闭所有端点或对env进行权限控制",
+    "rule": {
+        "path": "/env",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "java;spring",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "",
+        "email": "",
+        "github": ""
+    }
+}

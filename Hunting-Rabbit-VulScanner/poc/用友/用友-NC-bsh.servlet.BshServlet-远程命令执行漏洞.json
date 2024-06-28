@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友 NC bsh.servlet.BshServlet 远程命令执行漏洞",
+    "level": "高危",
+    "description": "用友 NC bsh.servlet.BshServlet 存在远程命令执行漏洞，通过BeanShell 执行远程命令获取服务器权限",
+    "product": "用友NC",
+    "version": "用友 NC6.5版本",
+    "cve": "无",
+    "reference": "https://peiqi.wgpsec.org/wiki/oa/%E7%94%A8%E5%8F%8BOA/%E7%94%A8%E5%8F%8B%20NC%20bsh.servlet.BshServlet%20%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.html",
+    "fixing": "及时安装该漏洞补丁包",
+    "rule": {
+        "path": "/servlet/~ic/bsh.servlet.BshServlet",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "BeanShell",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

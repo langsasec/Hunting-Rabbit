@@ -1,0 +1,24 @@
+{
+    "vul_name": "Alibaba Druid Monitor未授权访问",
+    "level": "中危",
+    "description": "会引发泄露系统敏感信息，可以清楚的查看数据库的相关连接信息",
+    "product": "Alibaba Druid Monitor",
+    "version": "",
+    "cve": "",
+    "reference": "https://blog.csdn.net/qq_36933421/article/details/139647152",
+    "fixing": "在Druid的配置中，有一个控制监控页面是否启用的配置，默认为true，开启监控页面，我们可以设置其为false彻底关闭监控页面，或配置监控页面的访问控制，注册一个Druid访问控制的bean",
+    "rule": {
+        "path": "/druid/index.html",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "druid",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

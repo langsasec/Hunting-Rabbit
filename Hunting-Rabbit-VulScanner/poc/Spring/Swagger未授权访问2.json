@@ -1,0 +1,24 @@
+{
+    "vul_name": "Swagger未授权访问",
+    "level": "中危",
+    "description": "泄露API接口信息",
+    "product": "Spring Boot",
+    "version": "未知",
+    "cve": "无",
+    "reference": "无",
+    "fixing": "删除该文件",
+    "rule": {
+        "path": "/v2/api-docs",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "get;info;version",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

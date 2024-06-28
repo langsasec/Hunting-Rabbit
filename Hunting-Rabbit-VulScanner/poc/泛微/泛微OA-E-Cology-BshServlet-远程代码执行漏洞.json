@@ -1,0 +1,24 @@
+{
+    "vul_name": "泛微OA E-Cology BshServlet 远程代码执行漏洞",
+    "level": "高危",
+    "description": "2019年9月17日泛微OA官方更新了一个远程代码执行漏洞补丁, 泛微e-cology OA系统的Java Beanshell接口可被未授权访问, 攻击者调用该Beanshell接口, 可构造特定的HTTP请求绕过泛微本身一些安全限制从而达成远程命令执行, 漏洞等级严重",
+    "product": "泛微OA E-Cology",
+    "version": "E-cology 7.0  E-cology 8.0  E-cology 8.1  E-cology 9.0",
+    "cve": "CNVD-2019-32204",
+    "reference": "https://peiqi.wgpsec.org/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Cology%20BshServlet%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E%20CNVD-2019-32204.html",
+    "fixing": "联系厂商或自行修复补丁",
+    "rule": {
+        "path": "/weaver/bsh.servlet.BshServlet/",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "BeanShell",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

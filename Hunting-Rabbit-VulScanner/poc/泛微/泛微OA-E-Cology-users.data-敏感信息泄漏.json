@@ -1,0 +1,24 @@
+{
+    "vul_name": "泛微OA E-Cology users.data 敏感信息泄漏",
+    "level": "中危",
+    "description": "泛微OA E-Cology users.data 允许任意用户下载，获取OA中的敏感信息。base64 GBK解码即可获取OA中的敏感数据",
+    "product": "泛微OA E-Cology",
+    "version": "泛微OA E-Cology",
+    "cve": "未知",
+    "reference": "https://peiqi.wgpsec.org/wiki/oa/%E6%B3%9B%E5%BE%AEOA/%E6%B3%9B%E5%BE%AEOA%20E-Cology%20users.data%20%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E6%BC%8F.html",
+    "fixing": "禁止外部访问或者删除",
+    "rule": {
+        "path": "/messager/users.data",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "P;+",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

